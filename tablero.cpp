@@ -3,6 +3,9 @@
 
 using namespace std;
 
+int puntoa=0;
+int puntob=0;
+
 Tablero::Tablero(){
 
 }
@@ -138,7 +141,24 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
 				
 			    	matrix[pxa][pya] = '_';
 				matrix[pxb][pyb] = '+';
-				cout<<"dos"<<endl;
+			if(matrix[pxb+1][pyb]=='#')
+                           matrix[pxb+1][pyb] = '+';
+                        if(matrix[pxb-1][pyb]=='#')
+                           matrix[pxb-1][pyb]= '+';
+                        if(matrix[pxb][pyb+1]=='#')
+                           matrix[pxb][pyb+1]='+';
+                        if(matrix[pxb][pyb-1]== '#')
+                           matrix[pxb][pyb-1]='+';
+                        if(matrix[pxb+1][pyb+1]== '#')
+                           matrix[pxb+1][pyb+1]='+';
+                        if(matrix[pxb-1][pyb-1]== '#')
+                           matrix[pxb-1][pyb-1]='+';
+                        if(matrix[pxb+1][pyb-1]== '#')
+                           matrix[pxb+1][pyb-1]='+';
+                        if(matrix[pxb-1][pyb+1]== '#')
+                           matrix[pxb-1][pyb+1]='+';
+
+			//	cout<<"dos"<<endl;
 		   }
 		}
 
@@ -146,7 +166,7 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
 }
 
 void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
-	 if(matrix[pxa][pya] != '+'){
+	 if(matrix[pxa][pya] != '#'){
            cout<<"¡¡Esta Pieza No es Suya!!"<<endl;
            cout<<"Pierde Turno"<<endl;
         }else{
@@ -161,18 +181,18 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                             matrix[pxb][pyb] == '_' && (pxa-1==pxb && pya+1==pyb) ){
 
 
-                           matrix[pxa][pya] = '+';
-                           matrix[pxb][pyb] = '+';
+                           matrix[pxa][pya] = '#';
+                           matrix[pxb][pyb] = '#';
 
                         if(matrix[pxb+1][pyb]=='+')
                            matrix[pxb+1][pyb] = '#';
                         if(matrix[pxb-1][pyb]=='+')
                            matrix[pxb-1][pyb]= '#';
-                        if(matrix[pxb][pyb+1]=='#')
+                        if(matrix[pxb][pyb+1]=='+')
                            matrix[pxb][pyb+1]='#';
-                        if(matrix[pxb][pyb-1]== '#')
+                        if(matrix[pxb][pyb-1]== '+')
                            matrix[pxb][pyb-1]='#';
-                        if(matrix[pxb+1][pyb+1]== '#')
+                        if(matrix[pxb+1][pyb+1]== '+')
                            matrix[pxb+1][pyb+1]='#';
                         if(matrix[pxb-1][pyb-1]== '+')
                            matrix[pxb-1][pyb-1]='#';
@@ -194,7 +214,24 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
 
                                 matrix[pxa][pya] = '_';
                                 matrix[pxb][pyb] = '+';
-                               // cout<<"dos"<<endl;
+                        if(matrix[pxb+1][pyb]=='#')
+                           matrix[pxb+1][pyb] = '+';
+                        if(matrix[pxb-1][pyb]=='#')
+                           matrix[pxb-1][pyb]= '+';
+                        if(matrix[pxb][pyb+1]=='#')
+                           matrix[pxb][pyb+1]='+';
+                        if(matrix[pxb][pyb-1]== '#')
+                           matrix[pxb][pyb-1]='+';
+                        if(matrix[pxb+1][pyb+1]== '#')
+                           matrix[pxb+1][pyb+1]='+';
+                        if(matrix[pxb-1][pyb-1]== '#')
+                           matrix[pxb-1][pyb-1]='+';
+                        if(matrix[pxb+1][pyb-1]== '#')
+                           matrix[pxb+1][pyb-1]='+';
+                        if(matrix[pxb-1][pyb+1]== '#')
+                           matrix[pxb-1][pyb+1]='+';
+
+				// cout<<"dos"<<endl;
                    }
                 }
 

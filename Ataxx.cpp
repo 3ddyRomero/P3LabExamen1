@@ -44,7 +44,7 @@ int main(){
                         cin>>b;
                 }
                 if(conta % 2 != 0){
-                        cout<<Playera<<" <--> Pieza (+)"<<endl;
+                        cout<<Playera<<"Turno de: <--> Pieza (+)"<<endl;
                         tabla->movePlayera(x,y,a,b);
 
                         while(verifacionPieza == 0){
@@ -64,7 +64,7 @@ int main(){
                         conta++;
                         verifacionPieza = -1;
                 }else if(conta % 2 == 0){
-                        cout<<Playerb<<" <--> Pieza (#)"<<endl;
+                        cout<<Playerb<<"Turno de: <--> Pieza (#)"<<endl;
                         tabla->movePlayerb(x,y,a,b);
                         while(verifacionPieza == 0){
                                 while((x<0 || x>11) || (y<0 || y>11) || (a<0 || a>11) || (b<0 || b>11)){
