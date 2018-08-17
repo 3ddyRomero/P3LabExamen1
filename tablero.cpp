@@ -128,7 +128,7 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
 			if(matrix[pxb-1][pyb+1]== '#')
                            matrix[pxb-1][pyb+1]='+';
 		
-
+			
 			
 		   }else if(matrix[pxb][pyb] == '_' && pxa+2==pxb && pya==pyb ||
                       	    matrix[pxb][pyb] == '_' && pxa-2==pxb && pya==pyb ||
