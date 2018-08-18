@@ -42,13 +42,15 @@ int main(){
                         cin>>a;
                         cout<<"Ingrese la coordenada en y en la direccion a moverse: "<<endl;
                         cin>>b;
+                        cout<<endl;
                 }
                 if(conta % 2 != 0){
-                        cout<<Playera<<"Turno de: <--> Pieza (+)"<<endl;
+                        cout<<"|"<<Playera<<"|"<<" Turno de: <--> Pieza (+)"<<endl;
                         tabla->movePlayera(x,y,a,b);
 
                         while(verifacionPieza == 0){
                                 while((x<0 || x>11) || (y<0 || y>11) || (a<0 || a>11) || (b<0 || b>11)){
+                                        cout<<"Piezas (+)"<<endl;
                                         cout<<"Ingrese la coordenada en x de la pieza a mover: "<<endl;
                                         cin>>x;
                                         cout<<"Ingrese la coordenada en y de la pieza a mover: "<<endl;
@@ -57,6 +59,7 @@ int main(){
                                         cin>>a;
                                         cout<<"Ingrese la coordenada en y en la direccion a moverse: "<<endl;
                                         cin>>b;
+                                        cout<<endl;
                                 }
                                 
                         }tabla->printMatrix();
@@ -64,10 +67,11 @@ int main(){
                         conta++;
                         verifacionPieza = -1;
                 }else if(conta % 2 == 0){
-                        cout<<Playerb<<"Turno de: <--> Pieza (#)"<<endl;
+                        cout<<"|"<<Playerb<<"|"<<" Turno de: <--> Pieza (#)"<<endl;
                         tabla->movePlayerb(x,y,a,b);
                         while(verifacionPieza == 0){
                                 while((x<0 || x>11) || (y<0 || y>11) || (a<0 || a>11) || (b<0 || b>11)){
+                                        cout<<"Piezas (#)"<<endl;
                                         cout<<"Ingrese la coordenada en x de la pieza a mover: "<<endl;
                                         cin>>x;
                                         cout<<"Ingrese la coordenada en y de la pieza a mover: "<<endl;
@@ -76,6 +80,7 @@ int main(){
                                         cin>>a;
                                         cout<<"Ingrese la coordenada en y en la direccion a moverse: "<<endl;
                                         cin>>b;
+                                        cout<<endl;
                                 }
                         }tabla->printMatrix();
                         ejemp->printEjemplo();

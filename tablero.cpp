@@ -165,7 +165,15 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
                             matrix[pxb][pyb] == '_' && pxa+2==pxb && pya+2==pyb ||
                             matrix[pxb][pyb] == '_' && pxa-2==pxb && pya-2==pyb ||
                             matrix[pxb][pyb] == '_' && pxa+2==pxb && pya-2==pyb ||
-                            matrix[pxb][pyb] == '_' && pxa-2==pxb && pya+2==pyb){
+                            matrix[pxb][pyb] == '_' && pxa-2==pxb && pya+2==pyb ||
+                            matrix[pxb][pyb] == '#' && pxa+2==pxb && pya==pyb ||
+                            matrix[pxb][pyb] == '#' && pxa-2==pxb && pya==pyb ||
+                            matrix[pxb][pyb] == '#' && pya+2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb] == '#' && pya-2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb] == '#' && pxa+2==pxb && pya+2==pyb ||
+                            matrix[pxb][pyb] == '#' && pxa-2==pxb && pya-2==pyb ||
+                            matrix[pxb][pyb] == '#' && pxa+2==pxb && pya-2==pyb ||
+                            matrix[pxb][pyb] == '#' && pxa-2==pxb && pya+2==pyb){
 				
 			    	matrix[pxa][pya] = '_';
 				    matrix[pxb][pyb] = '+';
@@ -309,7 +317,15 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                             matrix[pxb][pyb] == '_' && pxa+2==pxb && pya+2==pyb ||
                             matrix[pxb][pyb] == '_' && pxa-2==pxb && pya-2==pyb ||
                             matrix[pxb][pyb] == '_' && pxa+2==pxb && pya-2==pyb ||
-                            matrix[pxb][pyb] == '_' && pxa-2==pxb && pya+2==pyb){
+                            matrix[pxb][pyb] == '_' && pxa-2==pxb && pya+2==pyb ||
+                            matrix[pxb][pyb] == '+' && pxa+2==pxb && pya==pyb ||
+                            matrix[pxb][pyb] == '+' && pxa-2==pxb && pya==pyb ||
+                            matrix[pxb][pyb] == '+' && pya+2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb] == '+' && pya-2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb] == '+' && pxa+2==pxb && pya+2==pyb ||
+                            matrix[pxb][pyb] == '+' && pxa-2==pxb && pya-2==pyb ||
+                            matrix[pxb][pyb] == '+' && pxa+2==pxb && pya-2==pyb ||
+                            matrix[pxb][pyb] == '+' && pxa-2==pxb && pya+2==pyb){
 
                                 matrix[pxa][pya] = '_';
                                 matrix[pxb][pyb] = '#';
@@ -373,7 +389,7 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                             matrix[pxb+1][pyb+1] == '+' && pxa-2==pxb && pya-2==pyb ||
                             matrix[pxb-1][pyb+1] == '+' && pxa+2==pxb && pya-2==pyb ||
                             matrix[pxb+1][pyb-1] == '+' && pxa-2==pxb && pya+2==pyb){
-				cout<<"NO puede saltar"<<endl;
+				                    cout<<"NO puede saltar"<<endl;
 		   }
                 }
 
