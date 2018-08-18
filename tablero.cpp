@@ -57,7 +57,7 @@ void Tablero::createEjemplo(){
 	ejemplo[8][0]='7';
 	ejemplo[9][0]='8';
 	ejemplo[10][0]='9';
-	ejemplo[11][0]='z';
+	ejemplo[11][0]='x';
 	//ejemplo[12][0]='v';
 
 	ejemplo[0][1]='0';
@@ -159,7 +159,16 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
                            matrix[pxb-1][pyb+1]='+';
 
 			//	cout<<"dos"<<endl;
-		   }
+		   }else if(matrix[pxb-1][pyb] == '+' && pxa+2==pxb && pya==pyb ||
+                            matrix[pxb+1][pyb] == '+' && pxa-2==pxb && pya==pyb ||
+                            matrix[pxb][pyb-1] == '+' && pya+2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb+1] == '+' && pya-2==pyb && pxb==pxa ||
+                            matrix[pxb-1][pyb-1] == '+' && pxa+2==pxb && pya+2==pyb ||
+                            matrix[pxb+1][pyb+1] == '+' && pxa-2==pxb && pya-2==pyb ||
+                            matrix[pxb-1][pyb+1] == '+' && pxa+2==pxb && pya-2==pyb ||
+                            matrix[pxb+1][pyb-1] == '+' && pxa-2==pxb && pya+2==pyb){
+                                cout<<"NO puede saltar"<<endl;
+                   }
 		}
 
 	}	
@@ -213,26 +222,36 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                             matrix[pxb][pyb] == '_' && pxa-2==pxb && pya+2==pyb){
 
                                 matrix[pxa][pya] = '_';
-                                matrix[pxb][pyb] = '+';
-                        if(matrix[pxb+1][pyb]=='#')
-                           matrix[pxb+1][pyb] = '+';
-                        if(matrix[pxb-1][pyb]=='#')
-                           matrix[pxb-1][pyb]= '+';
-                        if(matrix[pxb][pyb+1]=='#')
-                           matrix[pxb][pyb+1]='+';
-                        if(matrix[pxb][pyb-1]== '#')
-                           matrix[pxb][pyb-1]='+';
-                        if(matrix[pxb+1][pyb+1]== '#')
-                           matrix[pxb+1][pyb+1]='+';
-                        if(matrix[pxb-1][pyb-1]== '#')
-                           matrix[pxb-1][pyb-1]='+';
-                        if(matrix[pxb+1][pyb-1]== '#')
-                           matrix[pxb+1][pyb-1]='+';
-                        if(matrix[pxb-1][pyb+1]== '#')
-                           matrix[pxb-1][pyb+1]='+';
+                                matrix[pxb][pyb] = '#';
+                       
+                        if(matrix[pxb+1][pyb]=='+')
+                           matrix[pxb+1][pyb] = '#';
+                        if(matrix[pxb-1][pyb]=='+')
+                           matrix[pxb-1][pyb]= '#';
+                        if(matrix[pxb][pyb+1]=='+')
+                           matrix[pxb][pyb+1]='#';
+                        if(matrix[pxb][pyb-1]== '+')
+                           matrix[pxb][pyb-1]='#';
+                        if(matrix[pxb+1][pyb+1]== '+')
+                           matrix[pxb+1][pyb+1]='#';
+                        if(matrix[pxb-1][pyb-1]== '+')
+                           matrix[pxb-1][pyb-1]='#';
+                        if(matrix[pxb+1][pyb-1]== '+')
+                           matrix[pxb+1][pyb-1]='#';
+                        if(matrix[pxb-1][pyb+1]== '+')
+                           matrix[pxb-1][pyb+1]='#';
 
 				// cout<<"dos"<<endl;
-                   }
+                   }else if(matrix[pxb-1][pyb] == '+' && pxa+2==pxb && pya==pyb ||
+                            matrix[pxb+1][pyb] == '+' && pxa-2==pxb && pya==pyb ||
+                            matrix[pxb][pyb-1] == '+' && pya+2==pyb && pxb==pxa ||
+                            matrix[pxb][pyb+1] == '+' && pya-2==pyb && pxb==pxa ||
+                            matrix[pxb-1][pyb-1] == '+' && pxa+2==pxb && pya+2==pyb ||
+                            matrix[pxb+1][pyb+1] == '+' && pxa-2==pxb && pya-2==pyb ||
+                            matrix[pxb-1][pyb+1] == '+' && pxa+2==pxb && pya-2==pyb ||
+                            matrix[pxb+1][pyb-1] == '+' && pxa-2==pxb && pya+2==pyb){
+				cout<<"NO puede saltar"<<endl;
+		   }
                 }
 
         }
