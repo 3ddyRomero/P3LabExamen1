@@ -139,7 +139,7 @@ void Tablero::movePlayera(int pxa,int pya,int pxb,int pyb){
 			if(matrix[pxb+1][pyb+1]== '#'){
                            puntoa+=1;
                            cout<<"Puntos: "<<puntoa<<endl;
-			      	matrix[pxb+1][pyb+1]='+';
+        matrix[pxb+1][pyb+1]='+';
 			}
 			if(matrix[pxb-1][pyb-1]== '#'){
                            puntoa+=1;
@@ -262,15 +262,15 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb] = '#';
                          }
                         if(matrix[pxb][pyb+1]=='+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb][pyb+1] = '#';
                          } 
-                        if(matrix[pxb][pyb-1]== '+'){
+                        if(matrix[pxb+1][pyb]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
@@ -280,26 +280,26 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb+1][pyb+1] = '#';
                          }
                           
                         if(matrix[pxb-1][pyb-1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb-1] = '#';
                          }
                         if(matrix[pxb+1][pyb-1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb+1][pyb-1] = '#';
                          }
                         if(matrix[pxb-1][pyb+1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb+1] = '#';
                          }
                          
                    }else if(matrix[pxb][pyb] == '_' && pxa+2==pxb && pya==pyb ||
@@ -324,44 +324,44 @@ void Tablero::movePlayerb(int pxa,int pya,int pxb,int pyb){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb] = '#';
                          }
                         if(matrix[pxb][pyb+1]=='+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb][pyb+1] = '#';
                          } 
                         if(matrix[pxb][pyb-1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb][pyb-1] = '#';
                          }
                         if(matrix[pxb+1][pyb+1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb+1][pyb+1] = '#';
                          }
                           
                         if(matrix[pxb-1][pyb-1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb-1] = '#';
                          }
                         if(matrix[pxb+1][pyb-1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb+1][pyb-1] = '#';
                          }
                         if(matrix[pxb-1][pyb+1]== '+'){
                            puntob+=1;
                            cout<<"Puntos: "<<puntob<<endl; 
 
-                           matrix[pxb+1][pyb] = '#';
+                           matrix[pxb-1][pyb+1] = '#';
                          }
 
 				// cout<<"dos"<<endl;
